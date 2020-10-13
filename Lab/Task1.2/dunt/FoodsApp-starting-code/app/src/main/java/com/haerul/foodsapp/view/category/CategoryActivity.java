@@ -41,16 +41,16 @@ public class CategoryActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         initActionBar();
-        initIntent();
-        
+        InitIntent();
+
     }
 
-    private void initIntent() {
+    private void InitIntent() {
         Intent intent = getIntent();
         List<Categories.Category> categories =
                 (List<Categories.Category>) intent.getSerializableExtra(HomeActivity.EXTRA_CATEGORY);
         int position = intent.getIntExtra(HomeActivity.EXTRA_POSITION, 0);
-        
+
         ViewPagerCategoryAdapter adapter = new ViewPagerCategoryAdapter(
                 getSupportFragmentManager(),
                 categories);
@@ -58,7 +58,6 @@ public class CategoryActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setCurrentItem(position, true);
         adapter.notifyDataSetChanged();
-        
     }
 
     private void initActionBar() {

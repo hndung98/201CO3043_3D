@@ -23,7 +23,6 @@ public class CategoryPresenter {
     }
     
     void getMealByCategory(String category) {
-        
         view.showLoading();
         Call<Meals> mealsCall = Utils.getApi().getMealByCategory(category);
         mealsCall.enqueue(new Callback<Meals>() {

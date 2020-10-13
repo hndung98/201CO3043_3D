@@ -29,10 +29,10 @@ public class CategoryPresenter {
         mealsCall.enqueue(new Callback<Meals>() {
             @Override
             public void onResponse(@NonNull Call<Meals> call,@NonNull Response<Meals> response) {
-                view.hideLoading();;
-                if(response.isSuccessful() && response.body() != null){
+                view.hideLoading();
+                if (response.isSuccessful() && response.body() != null) {
                     view.setMeals(response.body().getMeals());
-                }else{
+                } else {
                     view.onErrorLoading(response.message());
                 }
             }
