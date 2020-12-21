@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Fast Food</string>
+    <!-- Strings related to login -->
+    <string name="prompt_phone">Số điện thoại</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mật khẩu</string>
+    <string name="action_sign_in">Đăng nhập</string>
+    <string name="action_sign_up">Chưa có tài khoản?</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Tên đăng nhập  không hợp lệ</string>
+    <string name="invalid_password">Mật khẩu không hợp lệ</string>
+    <string name="incorrect_username">Tên đăng nhập  không đúng</string>
+    <string name="incorrect_password">Mật khẩu không đúng</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="version">version 1.0.0</string>
+</resources>

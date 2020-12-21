@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shop.ShopAddFoodActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_below="@+id/txtTitle"
+        android:background="@color/orange_light"
+        android:id="@+id/image_food"
+        android:autofillHints="@string/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="256sp"/>
+
+    <EditText
+        android:layout_below="@+id/image_food"
+        android:layout_marginTop="10dp"
+        android:id="@+id/edt_name"
+        android:hint="Tên sản phẩm"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_below="@+id/edt_name"
+        android:layout_marginTop="10dp"
+        android:id="@+id/edt_price"
+        android:maxLines="1"
+        android:hint="Giá bán lẻ (vnđ)"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_below="@+id/edt_price"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:id="@+id/edt_unit"
+        android:hint="Đơn vị bán: Hộp, Hũ, Phần, ..."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_below="@+id/edt_unit"
+        android:id="@+id/btn_confirm"
+        android:layout_marginTop="10dp"
+        android:text="Xác nhận"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_back"
+        android:text="Huỷ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

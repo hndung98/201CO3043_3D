@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange_light"
+    android:fitsSystemWindows="true"
+    tools:context=".customer.CustomerMainActivity">
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:background="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:queryHint="Search"
+        android:iconifiedByDefault="true">
+    </SearchView>
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/btn_cart"-->
+<!--        android:src="@mipmap/ic_cart_orange_round"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:background="@color/orange"-->
+<!--        android:layout_width="50sp"-->
+<!--        android:layout_height="50sp"/>-->
+
+    <TextView
+        android:layout_margin="10sp"
+        android:id="@+id/text_favourite"
+        android:layout_below="@+id/search_view"
+        android:text="Your Hobbies"
+        android:textColor="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"/>
+    <ScrollView
+        android:id="@+id/scroll_favourite"
+        android:layout_below="@+id/text_favourite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_favourite_shop"
+            android:background="@color/orange_light"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
+
+    <TextView
+        android:layout_margin="10sp"
+        android:id="@+id/text_recommend"
+        android:layout_below="@id/scroll_favourite"
+        android:text="Recommend"
+        android:textColor="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"/>
+
+    <ScrollView
+        android:id="@+id/scroll_recommend"
+        android:layout_below="@+id/text_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recommend_shop"
+            android:background="@color/orange_light"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
+
+    <LinearLayout
+        android:background="@color/orange"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:weightSum="4"
+        android:layout_height="55sp">
+        <requestFocus />
+
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:src="@drawable/ic_baseline_home_24_white"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="0dp"
+            android:background="@color/orange"
+            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:id="@+id/btn_profile"
+            android:src="@drawable/ic_baseline_account_circle_24_white"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:id="@+id/btn_history"
+            android:src="@drawable/ic_baseline_article_24_white"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:background="@color/orange"
+            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:id="@+id/btn_sign_out"
+            android:src="@drawable/ic_baseline_sign_out_24_white"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:background="@color/orange"
+            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

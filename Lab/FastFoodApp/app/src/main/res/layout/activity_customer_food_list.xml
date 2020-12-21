@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".customer.CustomerFoodListActivity">
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:background="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:queryHint="Search"
+        android:iconifiedByDefault="true">
+    </SearchView>
+
+    <ImageButton
+        android:id="@+id/btn_cart"
+        android:src="@mipmap/ic_cart_orange_round"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/orange"
+        android:layout_width="50sp"
+        android:layout_height="50sp"/>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:background="@color/orange"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:weightSum="4"
+        android:layout_height="55sp">
+        <requestFocus />
+
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:src="@drawable/ic_baseline_home_24_white"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="0dp"
+            android:background="@color/orange"
+            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:id="@+id/btn_profile"
+            android:src="@drawable/ic_baseline_account_circle_24_white"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:id="@+id/btn_history"
+            android:src="@drawable/ic_baseline_article_24_white"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:background="@color/orange"
+            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <ImageButton
+            android:id="@+id/btn_sign_out"
+            android:src="@drawable/ic_baseline_sign_out_24_white"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_vertical"
+            android:background="@color/orange"
+            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+<!--
+<com.google.android.material.appbar.AppBarLayout
+        android:fitsSystemWindows="true"
+        android:background="@color/pink"
+        android:theme="@style/Widget.Design.AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            android:layout_width="match_parent"
+            app:contentScrim="@color/orange_light"
+            android:background="@color/orange"
+            android:layout_height="50dp">
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <ImageButton
+            android:id="@+id/image_button"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher_main_foreground"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+    </com.google.android.material.appbar.AppBarLayout>
+-->

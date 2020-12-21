@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:weightSum="12"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:text="@string/app_name"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_weight="5"/>
+
+        <ImageButton
+            android:id="@+id/btn_minus"
+            android:src="@mipmap/ic_minus_white"
+            android:scaleType="fitXY"
+            android:background="@color/orange"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:id="@+id/item_amount"
+            android:gravity="center"
+            android:text="2"
+            android:textSize="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+        <ImageButton
+            android:id="@+id/btn_plus"
+            android:src="@mipmap/ic_plus_white"
+            android:scaleType="fitXY"
+            android:background="@color/orange"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:id="@+id/item_price"
+            android:gravity="center"
+            android:text="22.000"
+            android:textSize="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
