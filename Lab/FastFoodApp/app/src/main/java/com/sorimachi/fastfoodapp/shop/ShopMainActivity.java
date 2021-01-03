@@ -67,7 +67,12 @@ public class ShopMainActivity extends AppCompatActivity {
         cvAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ShopMainActivity.this, "account", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(ShopMainActivity.this, "account", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(ShopMainActivity.this, ShopProfileActivity.class);
+                intent.putExtra("phone", phone);
+                startActivity(intent);
+                finish();
             }
         });
 

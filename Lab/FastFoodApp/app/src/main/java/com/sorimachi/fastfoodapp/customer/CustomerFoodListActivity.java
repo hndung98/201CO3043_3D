@@ -82,6 +82,7 @@ public class CustomerFoodListActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot postSnapshot: snapshot.getChildren()){
                     Shop shop = postSnapshot.getValue(Shop.class);
+
                     if(shop.getShopCode().equals(shopCode)){
                         lstFoods = shop.getFoodList();
                         for(Food food: lstFoods){
@@ -89,6 +90,8 @@ public class CustomerFoodListActivity extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Uri uri) {
                                     lstModelFoods.add(new ModelFood(food.getFoodCode() , uri.toString(), food.getName(), food.getUnit(),food.getPrice()+""));
+
+
                                     LinearLayoutManager layoutManager = new LinearLayoutManager(CustomerFoodListActivity.this);
                                     RecyclerView.LayoutManager rvLayoutManager = layoutManager;
                                     rvList.setLayoutManager(rvLayoutManager);

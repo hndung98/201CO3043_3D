@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.sorimachi.fastfoodapp.R;
 import com.sorimachi.fastfoodapp.adapter.FoodAdapter;
 import com.sorimachi.fastfoodapp.data.model.ModelFood;
@@ -18,6 +20,10 @@ import com.sorimachi.fastfoodapp.ui.login.LoginActivity;
 import java.util.ArrayList;
 
 public class ShopFoodManagerActivity extends AppCompatActivity {
+    FirebaseDatabase database;
+    DatabaseReference databaseReference, databaseReferenceUser;
+
+
 
     RecyclerView rvList;
     Button btnAdd, btnHome,btnSignOut;
@@ -29,6 +35,8 @@ public class ShopFoodManagerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_food_manager);
 
@@ -55,6 +63,25 @@ public class ShopFoodManagerActivity extends AppCompatActivity {
     }
 
     private void LoadFoodsList(){
+        LinearLayoutManager layoutManager = new LinearLayoutManager(ShopFoodManagerActivity.this);
+        RecyclerView.LayoutManager rvLayoutManager = layoutManager;
+        rvList.setLayoutManager(rvLayoutManager);
+
+        FoodAdapter adapter = new FoodAdapter(ShopFoodManagerActivity.this, lstModelFoods, "Xoá");
+
+        rvList.setAdapter(adapter);
+
+        adapter.setOnItemClickListener(new FoodAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                lstModelFoods.remove(position);
+                LoadFoodsList();
+                Toast.makeText(ShopFoodManagerActivity.this, "pos: " + position, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void changeItemFood(){
         LinearLayoutManager layoutManager = new LinearLayoutManager(ShopFoodManagerActivity.this);
         RecyclerView.LayoutManager rvLayoutManager = layoutManager;
         rvList.setLayoutManager(rvLayoutManager);

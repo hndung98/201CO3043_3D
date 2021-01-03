@@ -75,10 +75,6 @@ public class LoginActivity extends AppCompatActivity {
                 .load("https://firebasestorage.googleapis.com/v0/b/fastfood-3b635.appspot.com/o/images%2Fshop4.jpg?alt=media&token=f8c7140e-41a3-4ef8-905d-14e01fb950cd")
                 .apply(options)
                 .into(imageLogo);
-//        Glide.with(this)
-//                .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkmB9iOz6ERyZmXcxId6tInugZySKSfw0SDw&usqp=CAU")
-//                .into(imageLogo);
-
     }
 
     private void SignIn(String username, String password)
@@ -192,6 +188,5 @@ public class LoginActivity extends AppCompatActivity {
         btnSignUp = (TextView)findViewById(R.id.btn_sign_up);
         imageLogo = findViewById(R.id.image_logo);
     }
-
 
 }
